@@ -1,0 +1,3 @@
+[submodule "src/java/ggp-base"]
+	path = src/java/ggp-base
+	url = git@github.com:cerebro/ggp-base.git
