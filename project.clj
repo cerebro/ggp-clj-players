@@ -1,4 +1,4 @@
-(defproject ggp-clj "0.1.0-SNAPSHOT"
+(defproject ggp-clj-players "0.1.0"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -12,16 +12,14 @@
                  [org.xhtmlrenderer/flying-saucer-core "9.0.4"]
                  [nu.validator.htmlparser/htmlparser "1.4"]
                  [com.google.guava/guava "16.0"]
-                 [org.reflections/reflections "0.9.9-RC1"]] ;; [org.ggp/ggp-base "0.1.0"]
-
-  :aot :all
-  ; :profiles {:uberjar {:aot :all}}
-  ; :main [ggp-clj.main]
-  :java-source-paths ["src/java"]
+                 [org.reflections/reflections "0.9.9-RC1"]]
   :source-paths      ["src/clj"]
+  :java-source-paths ["src/java"]
   :javac-options     ["-target" "1.7" "-source" "1.7"] ; "-Xlint:deprecation"
   ; :global-vars {*warn-on-reflection* true
   ;               *assert* false}
   ; :bootclasspath true
-
+  :profiles {:uberjar {:aot [ggp-clj-players.random]}}
+  :aliases {"kiosk" ["do" "clean" ["uberjar"] ["run" "-m" "ggp-clj-players.core/kiosk"]]
+            "launch" ["do" "clean" ["uberjar"] ["run" "-m" "ggp-clj-players.core/play"]]}
   )

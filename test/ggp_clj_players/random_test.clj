@@ -1,4 +1,4 @@
-(ns ggp-clj.core-test
+(ns ggp-clj-players.random-test
   (:require [clojure.test :refer :all]
             [ggp-clj.core :refer :all]))
 
