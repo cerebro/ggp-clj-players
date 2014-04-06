@@ -8,12 +8,14 @@ Take a look at the Random Move Player clojure code and build upon it. I intend t
 ```
 git submodule init
 git submodule update
-lein do deps, kiosk
+lein sub install
+lein do deps, compile
+lein kiosk
 ```
 
 Then pick any of the sample games available in the Kiosk and pick the cljRandomPlayer to test it out. The other sample players listed come from the Java library itself.
 
-You can also fire the player of your choice for remote game playing via ```./play.sh```
+You can also fire the player of your choice for remote game playing via ```lein launch``
 
 ## License
 
